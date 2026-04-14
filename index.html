@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<title>زيارة عاشوراء</title>
+
+<style>
+body {
+    direction: rtl;
+    font-family: "Tahoma", Arial;
+    background: linear-gradient(#0f0f0f, #1a1a1a);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 700px;
+    margin: auto;
+}
+
+h1 {
+    color: #ff4d4d;
+}
+
+.top-text {
+    color: #ccc;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.bottom-text {
+    margin-top: 20px;
+    color: #ccc;
+    font-size: 16px;
+}
+
+.scroll-box {
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    border: 1px solid #444;
+    line-height: 2;
+    text-align: right;
+}
+
+button {
+    margin-top: 15px;
+    background: #ff4d4d;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="top-text">
+        صدقة جارية الى روح ميعاد ابراهيم (ام ازهر)
+    </div>
+
+    <h1>زيارة عاشوراء</h1>
+
+    <div id="text" class="scroll-box">
+
+السلام عليك يا أبا عبد الله، السلام عليك يا ابن رسول الله، السلام عليك يا ابن أمير المؤمنين وابن سيد الوصيين...<br><br>
+
+السلام عليك يا أبا عبد الله، وعلى الأرواح التي حلت بفنائك، عليك مني سلام الله أبداً ما بقيت وبقي الليل والنهار...<br><br>
+
+يا أبا عبد الله لقد عظمت الرزية، وجلت وعظمت المصيبة بك علينا وعلى جميع أهل الإسلام...<br><br>
+
+اللهم العن أول ظالم ظلم حق محمد وآل محمد...<br><br>
+
+(تكدر هنا تكمل نص زيارة عاشوراء كامل)
+
+    </div>
+
+    <button onclick="speakText()">🔊 استماع</button>
+
+    <div class="bottom-text">
+        اللهم اجعل ثواب ما قرأت الى روح ميعاد ابراهيم رمضان
+    </div>
+
+</div>
+
+<script>
+function speakText() {
+    let text = document.getElementById("text").innerText;
+    let speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "ar-SA";
+    window.speechSynthesis.speak(speech);
+}
+</script>
+
+</body>
+</html>
